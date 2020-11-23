@@ -1,0 +1,70 @@
+html, body {
+    width: 100%;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+body {
+    height: 100vh;
+}
+div.carousal {
+    position: relative;
+    background-image: url('assets/slider-img2.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+}
+div.carousal > div.carousal-img {
+    background-image: url('assets/slider-img1.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: none;
+    animation-iteration-count: infinite;
+}
+.slide {
+    animation: slide;
+}
+div.carousal > div.carousal-status {
+    width: 100%;
+    position: absolute;
+    bottom: 10%;
+    background: transparent;
+    padding: 4% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+div.carousal > div.carousal-status span.circle {
+    width: 30px;
+    height:30px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: .5s ease-in-out;
+}
+div.carousal > div.carousal-status span.active {
+    background: rgb(94, 4, 4);
+}
+@keyframes slide {
+    0% {
+        margin-left: 0;
+    }
+    80% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: -100%;
+    }
+}
